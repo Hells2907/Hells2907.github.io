@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh; /* Make the body take up the entire viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+
+main {
+  text-align: center; /* Center text within the main content */
+}

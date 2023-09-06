@@ -1,4 +1,3 @@
-/* Heading (h1) styling */
 h1 {
   color: #4A5759;
   background-color: #EDAFB8;
@@ -6,20 +5,17 @@ h1 {
   text-align: center;
 }
 
-/* Main content (main) styling */
 main {
   background-color: #DEDBD2;
   padding: 20px;
   color: #4A5759;
 }
 
-/* Paragraph (p) styling */
 main p {
   text-align: left;
   margin-bottom: 10px;
 }
 
-/* Signature styling */
 main p:last-child {
   margin-left: 20px;
   font-weight: bold;

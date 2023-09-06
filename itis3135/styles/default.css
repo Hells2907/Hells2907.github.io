@@ -1,37 +1,31 @@
-/* Header styling */
 header {
   background-color: #EDAFB8;
   color: #4A5759;
   padding: 20px;
 }
 
-/* Navigation styling */
 nav {
   background-color: #F7E1D7;
   margin: 20px 0;
 }
 
-/* Main content styling */
 main {
   background-color: #DEDBD2;
   padding: 20px;
   color: #4A5759;
 }
 
-/* List item styling */
 ul li {
   text-align: left;
   margin-bottom: 10px;
 }
 
-/* Footer styling */
 footer {
   background-color: #B0C4B1;
   padding: 20px;
   color: #4A5759;
 }
 
-/* Links in the footer */
 footer a {
   color: #4A5759;
   text-decoration: none;

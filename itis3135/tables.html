@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial scale=1.0">
+        <title>Table Assignment</title>
+        <link rel="stylesheet" href="styles/default.css">
+        <style>
+            body {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                
+            }
+            header {
+                text-align: center;
+            }
+            nav {
+                margin: 20px 0;
+            }
+            ol {
+                text-align: left; 
+                display: inline-block; 
+                text-align: left; 
+            }
+            ol li {
+                text-align: left; 
+            }
+            table {
+                border-collapse: collapse; 
+                width: 50%; 
+                margin: auto; 
+            }
+            th, td {
+                border: 1px solid black; 
+                padding: 8px; 
+            }
+            table tr:first-child {
+            background-color: #333;
+            color: white;
+        }
+
+        
+        table tr:nth-child(even) {
+        background-color: #DEDBD2; 
+        color: #4A5759;
+}
+
+       table tr:nth-child(odd) {
+       background-color: #B0C4B1; 
+       color: #4A5759;
+}
+        
+        figure {
+            text-align: center;
+        }
+
+        
+        figcaption {
+            font-weight: bold;
+        }
+
+        
+        table tr.total {
+            background-color: #333;
+            color: white;
+        }
+        </style>
+    </head>
+<body>
+    <header>
+        <h1> Helly Acharya || ITIS 3135</h1>
+        <nav>
+            <a href="./">Homepage</a>
+            ||
+            <a href="introduction.html">Introduction</a>
+            ||
+            <a href="contract.html">Contract</a>
+            ||
+            <a href="tables.html">Table Assignment</a>
+            
+        </nav>
+    </header>
+    <main>
+        <h2> Table Assigment</h2>
+        <h3>My Tabular Data </h3>
+        <ol>
+            <li>Michael Schulte, mschulte@uncc.edu, 20</li>
+            <li>Mena Tadesse, mtadesse@uncc.edu, 15</li>
+            <li>Emily Wilkinson, ewilkinson@uncc.edu, 10</li>
+            <li>Natalie Hansford, nhansford@uncc.edu, 5</li>
+            <li>Kinny Briggs, kbriggs@uncc.edu, 4</li>
+            <li>Amaya Eaton, aeaton@uncc.edu, 3</li>
+            <li>Alvin Deku, adeku@uncc.edu, 1</li>
+        </ol>
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Years of Service</th>
+            </tr>
+            <tr>
+                <td>Michael Schulte</td>
+                <td>mschulte@uncc.edu</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Mena Tadesse</td>
+                <td>mtadesse@uncc.edu</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Emily Wilkinson</td>
+                <td>ewilkinson@uncc.edu</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Natalie Hansford</td>
+                <td>nhansford@uncc.edu</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Kinny Briggs</td>
+                <td>kbriggs@uncc.edu</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Amaya Eaton</td>
+                <td>aeaton@uncc.edu</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Alvin Deku</td>
+                <td>adeku@uncc.edu</td>
+                <td>1</td>
+            </tr>
+
+        </table>
+
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <figcaption>Employee Information</figcaption>
+            <table>
+                <tr>
+                    <th>Category</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Years of Service</th>
+                    <th>Salary</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Marketing</td>
+                    <td>Michael Schulte</td>
+                    <td>mschulte@uncc.edu</td>
+                    <td>20</td>
+                    <td>$72000</td>
+                </tr>
+                <tr>
+                    <td>Mena Tadesse</td>
+                    <td>mtadesse@uncc.edu</td>
+                    <td>15</td>
+                    <td>$60000</td>
+                </tr>
+                <tr>
+                    <td>Sales</td>
+                    <td>Emily Wilkinson</td>
+                    <td>ewilkinson@uncc.edu</td>
+                    <td>10</td>
+                    <td>$56000</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Support</td>
+                    <td>Natalie Hansford</td>
+                    <td>nhansford@uncc.edu</td>
+                    <td>5</td>
+                    <td>$50000</td>
+                </tr>
+                <tr>
+                    <td>Kinny Briggs</td>
+                    <td>kbriggs@uncc.edu</td>
+                    <td>4</td>
+                    <td>$42000</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Development</td>
+                    <td>Amaya Eaton</td>
+                    <td>aeaton@uncc.edu</td>
+                    <td>3</td>
+                    <td>$40000</td>
+                </tr>
+                <tr>
+                    <td>Alvin Deku</td>
+                    <td>adeku@uncc.edu</td>
+                    <td>1</td>
+                    <td>$35000</td>
+                </tr>
+                <tr class="total">
+                    <th colspan="3">Total Annual Salary Budget</th>
+                    <td>58</td>
+                    <td>$355,000</td>
+                </tr>
+            </table>
+        </figure>
+    </main>
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/hachary1/">Charlotte.edu</a>
+            ||
+            <a href="https://github.com/Hells2907">Github</a>
+            ||
+            <a href="https://hells2907.github.io/">Github.io</a>
+            ||
+            <a href="https://github.com/Hells2907/Hells2907.github.io/tree/main/itis3135">ITIS 3135 Github Pages</a>
+            ||
+            <a href="https://www.freecodecamp.org/Hells_2907">freeCodeCamp</a>
+            ||
+            <a href="https://www.codecademy.com/profiles/Hells2907">Codecademy</a>
+            ||
+            <a href="https://www.linkedin.com/in/helly-a-6a4893262/">LinkedIn</a>
+        </nav>
+
+        <p>Page Built by <a href="acharyainsights.com/index.html"> Acharya Insights </a>&copy; 2023 </p>
+        <a href="https://validator.w3.org/check?uri=referer">
+            <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
+           </a>
+           <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+             </a>
+           
+    </footer>
+</body>
+</html>

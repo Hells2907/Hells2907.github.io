@@ -1,7 +1,9 @@
 header {
+  text-align: center;
   background-color: #EDAFB8;
   color: #4A5759;
   padding: 20px;
+  margin: 0;
 }
 
 nav {
@@ -15,9 +17,41 @@ main {
   color: #4A5759;
 }
 
+ol {
+  text-align: left;
+  display: inline-block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+ol li {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%; 
+  margin: 0 auto; 
+}
+
 ul li {
   text-align: left;
   margin-bottom: 10px;
+}
+figure {
+  text-align: center;
+  margin: 0; 
+  padding: 0; 
+}
+
+figcaption {
+  font-weight: bold;
+}
+
+table tr.total {
+  background-color: #333;
+  color: white;
 }
 
 footer {

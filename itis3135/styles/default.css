@@ -12,9 +12,15 @@ nav {
 }
 
 main {
+  text-align: center;
   background-color: #DEDBD2;
   padding: 20px;
   color: #4A5759;
+  margin: 0; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 ol {
@@ -64,4 +70,40 @@ footer a {
   color: #4A5759;
   text-decoration: none;
   margin: 0 10px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  background-color: #333; 
+  color: #fff; 
+}
+
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  font-size: 16px;
+  margin: 5px 0; 
+  margin-bottom: 15px;
+}
+
+select {
+  width: 100%; 
+}
+
+label {
+  
+  font-weight: bold; 
+  color: #333;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%; 
 }

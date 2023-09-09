@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Forms</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        header {
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        form {
+            margin: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Helly Acharya || ITIS 3135</h1>
+    </header>
+    <main>
+        <h2>Business Forms</h2>
+        <h3>Provide your information here</h3>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+
+            <style>
+                label.checkbox {
+                    display: inline-block;
+                    margin-right: 10px; /* Adjust as needed for spacing */
+                }
+            </style>
+            
+            <label>Services:</label>
+            <label class="checkbox"><input type="checkbox" id="service1" name="services" value="web-design"> Web Design</label>
+            <label class="checkbox"><input type="checkbox" id="service2" name="services" value="app-development"> App Development</label>
+            <label class="checkbox"><input type="checkbox" id="service3" name="services" value="graphic-design"> Graphic Design</label>
+            <label class="checkbox"><input type="checkbox" id="service4" name="services" value="marketing"> Digital Marketing</label>
+            <label class="checkbox"><input type="checkbox" id="service5" name="services" value="seo"> SEO Services</label>
+            
+            <style>
+                label.radio {
+                    display: inline-block;
+                    margin-right: 10px; /* Adjust as needed for spacing */
+                }
+            </style>
+            
+            <label>Preferred Contact Method:</label>
+            <label class="radio"><input type="radio" id="contact-email" name="contact-method" value="email"> Email</label>
+            <label class="radio"><input type="radio" id="contact-phone" name="contact-method" value="phone"> Phone</label>
+            <label class="radio"><input type="radio" id="contact-chat" name="contact-method" value="chat"> Live Chat</label>
+            <label class="radio"><input type="radio" id="contact-meeting" name="contact-method" value="meeting"> In-Person Meeting</label>
+            
+            <label for="select-day">Select a Day:</label>
+            <select id="select-day" name="select-day">
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+            </select>
+
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+       
+
+        <nav>
+            <a href="https://webpages.charlotte.edu/hachary1/">Charlotte.edu</a>
+            ||
+            <a href="https://github.com/Hells2907">Github</a>
+            ||
+            <a href="https://hells2907.github.io/">Github.io</a>
+            ||
+            <a href="https://github.com/Hells2907/Hells2907.github.io/tree/main/itis3135">ITIS 3135 Github Pages</a>
+            ||
+            <a href="https://www.freecodecamp.org/Hells_2907">freeCodeCamp</a>
+            ||
+            <a href="https://www.codecademy.com/profiles/Hells2907">Codecademy</a>
+            ||
+            <a href="https://www.linkedin.com/in/helly-a-6a4893262/">LinkedIn</a>
+        </nav>
+
+        <p>Page Built by <a href="acharyainsights.com/index.html"> Acharya Insights </a>&copy; 2023 </p>
+        <a href="https://validator.w3.org/check?uri=referer">
+            <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
+           </a>
+           <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+             </a>
+           
+    </footer>
+</body>
+</html>

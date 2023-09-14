@@ -1,0 +1,40 @@
+header {
+    text-align: center;
+    background-color: #EDAFB8;
+    color: #4A5759;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  nav {
+    background-color: #F7E1D7;
+    margin: 20px 0;
+  }
+  
+  main {
+    text-align: center;
+    background-color: #DEDBD2;
+    padding: 20px;
+    color: #4A5759;
+    margin: 0; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  
+  
+  footer {
+    background-color: #B0C4B1;
+    padding: 20px;
+    color: #4A5759;
+  }
+  
+  footer a {
+    color: #4A5759;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  

@@ -5,6 +5,11 @@ header {
   padding: 20px;
   margin: 0;
 }
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
 
 nav {
   background-color: #F7E1D7;
@@ -41,6 +46,31 @@ table {
   margin: 0 auto; 
 }
 
+.table-container {
+  display: flex;
+  justify-content: space-around;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+table tr:first-child {
+  background-color: #333;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #DEDBD2;
+  color: #4A5759;
+}
+
+table tr:nth-child(odd) {
+  background-color: #B0C4B1;
+  color: #4A5759;
+}
+
+
 ul li {
   text-align: left;
   margin-bottom: 10px;
@@ -58,6 +88,13 @@ figcaption {
 table tr.total {
   background-color: #333;
   color: white;
+}
+.complex-table {
+  width: 45%; 
+}
+
+.complex-table th, .complex-table td {
+  padding: 8px; 
 }
 
 footer {
@@ -96,14 +133,26 @@ select {
 select {
   width: 100%; 
 }
-
+form {
+  margin: 20px;
+  text-align: left;
+}
 label {
   
   font-weight: bold; 
   color: #333;
+  display: block;
+  margin-bottom: 10px;
 }
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
   width: 100%; 
+}
+a {
+  color: #333; 
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }

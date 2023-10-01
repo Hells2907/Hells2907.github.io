@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial scale=1.0">
+        <title>Helly Acharya's Homey Alligator || ITIS 3135 Homepage</title>
+        <link rel="stylesheet" href="styles/default.css">
+        
+    </head>
+
+<body>
+    <div data-include="components/header.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <main>
+        
+        <h3 id="timeAndDate"></h3>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label for="mood">How are you feeling:</label>
+            <input type="text" id="mood" required>
+        </div>
+        <button onclick="submitInfo()">Submit</button>
+        <div id="welcomeMessage"></div>
+
+        <div>
+            <label for="favNumber">Favorite Number (0-10):</label>
+            <input type="number" id="favNumber" min="0" max="10" step="1">
+        </div>
+        
+        <button onclick="findPolygon()">Find Polygon</button>
+        <button onclick="changeBackgroundColor('yellow')">Bathe in the Sun</button>
+        <button onclick="changeBackgroundColor('blue')">Cool off in the water</button> 
+   
+    
+    
+    <script src="scripts/defaultscripts.js"></script>
+       
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+ 
+    
+    
+</body>
+</html>

@@ -167,3 +167,28 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.alligator-functions-box {
+  background-color: #DEDBD2;
+  border: 2px solid #4A5759;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.alligator-functions-box button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4A5759;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alligator-functions-box button:hover {
+  background-color: #333;
+}
+

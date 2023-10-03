@@ -1,34 +1,34 @@
-/* Header styles */
+
 .container {
-  background-color: rgba(128, 128, 128, 0.5); /* Adjust the opacity (last value) as needed */
-  padding: 20px; /* Adjust the padding as needed */
+  background-color: rgba(128, 128, 128, 0.5); 
+  padding: 20px; 
 } 
-/* Header styles */
+
 header {
-  color: #333; /* Text color */
+  color: #333; 
   text-align: center;
   padding: 20px;
   margin: 0;
-  font-size: 24px; /* Adjust the font size as needed */
-  width: 100%; /* Spread horizontally across the page */
+  font-size: 24px;
+  width: 100%; 
 }
 
-/* Style each link in the header as an individual box */
+
 header nav a {
   display: inline-block;
-  padding: 10px; /* Adjust the padding as needed */
-  margin: 0 10px; /* Adjust the spacing between links */
-  background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
-  border-radius: 10px; /* Rounded corners for each box */
+  padding: 10px; 
+  margin: 0 10px; 
+  background-color: rgba(255, 255, 255, 0.3); 
+  border-radius: 10px; 
   color: black;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s; /* Add smooth transitions */
+  transition: background-color 0.3s, color 0.3s; 
 }
 
-/* Change box background and text color on hover */
+
 header nav a:hover {
-  background-color: #666; /* Change box background color on hover */
-  color: black; /* Change text color on hover */
+  background-color: #666; 
+  color: black;
 }
 
 
@@ -112,19 +112,14 @@ ul li {
   font-weight: bold;
   color: #666; 
 }
-/* Link styles */
+
 a {
   color: white; 
   text-decoration: none; 
 }
 
-a:hover {
-  text-decoration: underline; /* Add underline on hover */
-}
 
-/* Footer link styles */
-/* Footer link styles */
-/* Footer link styles */
+
 footer {
   position: relative;
   bottom: 0;
@@ -136,22 +131,20 @@ footer {
   margin-top: 60px; 
 }
 
-/* Style each link as an individual box */
 footer nav a {
   display: inline-block;
-  padding: 10px; /* Adjust the padding as needed */
-  margin: 0 10px; /* Adjust the spacing between links */
-  background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
-  border-radius: 10px; /* Rounded corners for each box */
+  padding: 10px; 
+  margin: 0 10px; 
+  background-color: rgba(255, 255, 255, 0.3); 
+  border-radius: 10px; 
   color: black;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s; /* Add smooth transitions */
+  transition: background-color 0.3s, color 0.3s; 
 }
 
-/* Change box background and text color on hover */
 footer nav a:hover {
-  background-color: #666; /* Change box background color on hover */
-  color: white; /* Change text color on hover */
+  background-color: #666; 
+  color: white; 
 }
 
 

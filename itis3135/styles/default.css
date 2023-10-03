@@ -1,37 +1,58 @@
+/* Header styles */
+.container {
+  background-color: rgba(128, 128, 128, 0.5); /* Adjust the opacity (last value) as needed */
+  padding: 20px; /* Adjust the padding as needed */
+} 
+/* Header styles */
 header {
+  color: #333; /* Text color */
   text-align: center;
-  background-color: #EDAFB8;
-  color: #4A5759;
   padding: 20px;
   margin: 0;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
+  font-size: 24px; /* Adjust the font size as needed */
+  width: 100%; /* Spread horizontally across the page */
 }
 
-
-nav {
-  background-color: #F7E1D7;
-  margin: 20px 0;
+/* Style each link in the header as an individual box */
+header nav a {
+  display: inline-block;
+  padding: 10px; /* Adjust the padding as needed */
+  margin: 0 10px; /* Adjust the spacing between links */
+  background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
+  border-radius: 10px; /* Rounded corners for each box */
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transitions */
 }
+
+/* Change box background and text color on hover */
+header nav a:hover {
+  background-color: #666; /* Change box background color on hover */
+  color: white; /* Change text color on hover */
+}
+
 
 main {
-
   text-align: center;
-  background-color: #DEDBD2;
   padding: 20px;
-  color: #4A5759;
-  margin: 0; 
+  margin: 0;
   display: flex;
   flex-direction: column; 
   justify-content: center; 
   align-items: center; 
   flex-grow: 1;
+  color: white;
 }
+
+body {
+  background-image: url('images/backgroundimg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
 
 ol {
   text-align: left;
@@ -40,6 +61,7 @@ ol {
   padding: 0;
   margin: 0;
 }
+
 ol li {
   text-align: left;
   margin-bottom: 10px;
@@ -60,19 +82,9 @@ th, td {
   padding: 8px;
 }
 
-table tr:first-child {
-  background-color: #333;
-  color: white;
-}
-
 table tr:nth-child(even) {
-  background-color: #DEDBD2;
-  color: #4A5759;
-}
-
-table tr:nth-child(odd) {
-  background-color: #B0C4B1;
-  color: #4A5759;
+  background-color: #f2f2f2; 
+  color: black;
 }
 
 
@@ -80,52 +92,72 @@ ul li {
   text-align: left;
   margin-bottom: 10px;
 }
-figure {
+.image-container {
+  background-color: #ccc; 
+  padding: 20px; 
+  border: 2px solid #666; 
+  border-radius: 10px; 
+  margin: 20px 0; 
+}
+
+
+.image-container figure {
   text-align: center;
-  margin: 0; 
-  padding: 0; 
+  margin: 0;
+  padding: 0;
 }
 
-figcaption {
+
+.image-container figcaption {
   font-weight: bold;
+  color: #666; 
+}
+/* Link styles */
+a {
+  color: white; 
+  text-decoration: none; 
 }
 
-table tr.total {
-  background-color: #333;
-  color: white;
-}
-.complex-table {
-  width: 45%; 
+a:hover {
+  text-decoration: underline; /* Add underline on hover */
 }
 
-.complex-table th, .complex-table td {
-  padding: 8px; 
-}
-
+/* Footer link styles */
+/* Footer link styles */
+/* Footer link styles */
 footer {
   position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #B0C4B1;
-  padding: 20px;
-  color: #4A5759;
   text-align: center;
+  padding: 20px;
+  margin: 0;
+  font-size: 24px; /* Adjust the font size as needed */
+  width: 100%; /* Spread horizontally across the page */
 }
 
-footer a {
-
-  color: #4A5759;
+/* Style each link as an individual box */
+footer nav a {
+  display: inline-block;
+  padding: 10px; /* Adjust the padding as needed */
+  margin: 0 10px; /* Adjust the spacing between links */
+  background-color: rgba(255, 255, 255, 0.3); /* Transparent white background */
+  border-radius: 10px; /* Rounded corners for each box */
+  color: black;
   text-decoration: none;
-  margin: 0 10px;
+  transition: background-color 0.3s, color 0.3s; /* Add smooth transitions */
 }
+
+/* Change box background and text color on hover */
+footer nav a:hover {
+  background-color: #666; /* Change box background color on hover */
+  color: white; /* Change text color on hover */
+}
+
 
 button[type="submit"],
 button[type="reset"] {
   background-color: #333; 
   color: #fff; 
 }
-
 
 input[type="text"],
 input[type="tel"],
@@ -151,21 +183,15 @@ form {
 label {
   
   font-weight: bold; 
-  color: #333;
+  color: white;
   display: block;
   margin-bottom: 10px;
 }
+
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
   width: 100%; 
-}
-a {
-  color: #333; 
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
 }
 
 .alligator-functions-box {
@@ -191,4 +217,5 @@ a:hover {
 .alligator-functions-box button:hover {
   background-color: #333;
 }
+
 

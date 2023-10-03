@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helly Acharya's Homey Alligator || ITIS 3135 Business Forms</title>
     <link rel="stylesheet" href="styles/default.css">
+    <style>
+        body {
+            background-image: url('images/backgroundimg.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+       
+    </style>   
    
 </head>
 <body>
+    <div class="container">
     <div data-include="components/header.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
     <main>
         <h2>Business Forms</h2>
-        <h3>Provide your information here</h3>
+        <h3 id ="userInfo">Provide your information here</h3>
         <form action="#" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required placeholder="Your Name">
@@ -67,6 +80,6 @@
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
- 
+ </div>
 </body>
 </html>

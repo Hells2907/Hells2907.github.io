@@ -131,8 +131,9 @@ footer {
   text-align: center;
   padding: 20px;
   margin: 0;
-  font-size: 24px; /* Adjust the font size as needed */
-  width: 100%; /* Spread horizontally across the page */
+  font-size: 24px; 
+  width: 100%; 
+  margin-top: 20px; 
 }
 
 /* Style each link as an individual box */

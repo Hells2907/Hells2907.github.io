@@ -147,20 +147,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Add new course text boxes
-    addCourseButton.addEventListener('click', function () {
-        const coursesDiv = document.getElementById('courses');
-        const newCourseInput = document.createElement('input');
-        newCourseInput.type = 'text';
-        newCourseInput.name = 'course';
-        coursesDiv.appendChild(newCourseInput);
+addCourseButton.addEventListener('click', function () {
+    const coursesDiv = document.getElementById('courses');
+    const newCourseInput = document.createElement('input');
+    newCourseInput.type = 'text';
+    newCourseInput.name = 'course';
+    coursesDiv.appendChild(newCourseInput);
 
-        // Add a delete button
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
-        deleteButton.addEventListener('click', function () {
-            coursesDiv.removeChild(newCourseInput);
-            coursesDiv.removeChild(deleteButton);
-        });
-        coursesDiv.appendChild(deleteButton);
+    // Add a delete button
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', function () {
+        coursesDiv.removeChild(newCourseInput);
+        coursesDiv.removeChild(deleteButton);
     });
+    coursesDiv.appendChild(deleteButton);
+});
+
 });

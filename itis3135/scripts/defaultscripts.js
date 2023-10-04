@@ -69,3 +69,98 @@ function alligatorJoke() {
 function alligatorSwim() {
     alert("🏊‍♂️🐊 Alligator is taking a dip in the swamp! 🏊‍♂️🐊");
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('introForm');
+    const addCourseButton = document.getElementById('addCourse');
+    const resultsContainer = document.getElementById('resultsContainer');
+
+    // Prevent form submission without necessary information
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the form from submitting by default
+
+        // Implement form validation logic here
+        const name = document.getElementById('name').value;
+        const mascot = document.getElementById('mascot').value;
+        const image = document.getElementById('image').value;
+        const imageCaption = document.getElementById('imageCaption').value;
+        const personalBackground = document.getElementById('personalBackground').value;
+        const professionalBackground = document.getElementById('professionalBackground').value;
+        const academicBackground = document.getElementById('academicBackground').value;
+        const backgroundinWebDevelopment = document.getElementById('backgroundinWebDevelopment').value;
+        const primaryComputerPlatform = document.getElementById('primaryComputerPlatform').value;
+
+        // Check if any of the required fields are empty
+        if (
+            name === '' ||
+            mascot === '' ||
+            image === '' ||
+            imageCaption === '' ||
+            personalBackground === '' ||
+            professionalBackground === '' ||
+            academicBackground === '' ||
+            backgroundinWebDevelopment === '' ||
+            primaryComputerPlatform === ''
+        ) {
+            alert('Please fill out all required fields.');
+        } else {
+            // Gather data from the form and display it
+            const courses = document.querySelectorAll('input[name="course"]');
+            const courseValues = [];
+            courses.forEach((course) => {
+                if (course.value !== '') {
+                    courseValues.push(course.value);
+                }
+            });
+
+            const funnyThing = document.getElementById('funnyThing').value;
+            const anythingElse = document.getElementById('anythingElse').value;
+            const agreement = document.getElementById('agreement').checked;
+
+            // Create a summary of the user's input
+            const summary = `
+                <h2>Introduction Page</h2>
+                <p>Name: ${name}</p>
+                <p>Mascot: ${mascot}</p>
+                <p>Image Caption: ${imageCaption}</p>
+                <p>Personal Background: ${personalBackground}</p>
+                <p>Professional Background: ${professionalBackground}</p>
+                <p>Academic Background: ${academicBackground}</p>
+                <p>Background in Web Development: ${backgroundinWebDevelopment}</p>
+                <p>Primary Computer Platform: ${primaryComputerPlatform}</p>
+                <p>Courses currently taking: ${courseValues.join(', ')}</p>
+                <p>Funny Thing: ${funnyThing}</p>
+                <p>Anything else? ${anythingElse}</p>
+                <p>Agreed to terms: ${agreement ? 'Yes' : 'No'}</p>
+            `;
+
+            // Display the summary
+            resultsContainer.innerHTML = summary;
+        }
+    });
+
+    // Reset the form when the Reset button is clicked
+    const resetButton = document.querySelector('input[type="reset"]');
+    resetButton.addEventListener('click', function () {
+        form.reset();
+        resultsContainer.innerHTML = ''; // Clear the results container
+    });
+
+    // Add new course text boxes
+    addCourseButton.addEventListener('click', function () {
+        const coursesDiv = document.getElementById('courses');
+        const newCourseInput = document.createElement('input');
+        newCourseInput.type = 'text';
+        newCourseInput.name = 'course';
+        coursesDiv.appendChild(newCourseInput);
+
+        // Add a delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', function () {
+            coursesDiv.removeChild(newCourseInput);
+            coursesDiv.removeChild(deleteButton);
+        });
+        coursesDiv.appendChild(deleteButton);
+    });
+});

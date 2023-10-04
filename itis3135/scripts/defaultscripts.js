@@ -73,7 +73,7 @@ function alligatorSwim() {
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('introForm');
     const addCourseButton = document.getElementById('addCourse');
-    const resultsContainer = document.getElementById('resultsContainer');
+    const introPageContainer = document.getElementById('introPageContainer');
 
     // Prevent form submission without necessary information
     form.addEventListener('submit', function (event) {
@@ -89,9 +89,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const academicBackground = document.getElementById('academicBackground').value;
         const backgroundinWebDevelopment = document.getElementById('backgroundinWebDevelopment').value;
         const primaryComputerPlatform = document.getElementById('primaryComputerPlatform').value;
+        const courses = getCourseValues();
+        const funnyThing = document.getElementById('funnyThing').value;
+        const anythingElse = document.getElementById('anythingElse').value;
+        const agreement = document.getElementById('agreement').checked;
 
-        // Check if any of the required fields are empty
-        if (
+        // Check if all required fields are filled
+        const allFieldsAreFilled = !(
             name === '' ||
             mascot === '' ||
             image === '' ||
@@ -100,42 +104,33 @@ document.addEventListener('DOMContentLoaded', function () {
             professionalBackground === '' ||
             academicBackground === '' ||
             backgroundinWebDevelopment === '' ||
-            primaryComputerPlatform === ''
-        ) {
-            alert('Please fill out all required fields.');
-        } else {
-            // Gather data from the form and display it
-            const courses = document.querySelectorAll('input[name="course"]');
-            const courseValues = [];
-            courses.forEach((course) => {
-                if (course.value !== '') {
-                    courseValues.push(course.value);
-                }
-            });
+            primaryComputerPlatform === '' ||
+            courses.length === 0
+        );
 
-            const funnyThing = document.getElementById('funnyThing').value;
-            const anythingElse = document.getElementById('anythingElse').value;
-            const agreement = document.getElementById('agreement').checked;
-
-            // Create a summary of the user's input
-            const summary = `
-                <h2>Introduction Page</h2>
+        // If all required fields are filled
+        if (allFieldsAreFilled) {
+            // Create the introduction page HTML
+            const introPageHTML = `
+                <h2>Welcome to My Introduction Page</h2>
                 <p>Name: ${name}</p>
                 <p>Mascot: ${mascot}</p>
+                <img src="${image}" alt="User Image">
                 <p>Image Caption: ${imageCaption}</p>
                 <p>Personal Background: ${personalBackground}</p>
                 <p>Professional Background: ${professionalBackground}</p>
                 <p>Academic Background: ${academicBackground}</p>
                 <p>Background in Web Development: ${backgroundinWebDevelopment}</p>
                 <p>Primary Computer Platform: ${primaryComputerPlatform}</p>
-                <p>Courses currently taking: ${courseValues.join(', ')}</p>
+                <h3>Courses Currently Taking:</h3>
+                <ul>${generateCourseList()}</ul>
                 <p>Funny Thing: ${funnyThing}</p>
                 <p>Anything else? ${anythingElse}</p>
                 <p>Agreed to terms: ${agreement ? 'Yes' : 'No'}</p>
             `;
 
-            // Display the summary
-            resultsContainer.innerHTML = summary;
+            // Display the introduction page
+            introPageContainer.innerHTML = introPageHTML;
         }
     });
 
@@ -143,25 +138,42 @@ document.addEventListener('DOMContentLoaded', function () {
     const resetButton = document.querySelector('input[type="reset"]');
     resetButton.addEventListener('click', function () {
         form.reset();
-        resultsContainer.innerHTML = ''; // Clear the results container
+        introPageContainer.innerHTML = ''; // Clear the introduction page container
     });
+
+    // Function to get values of course input fields
+    function getCourseValues() {
+        const courses = document.querySelectorAll('input[name="course"]');
+        const courseValues = [];
+        courses.forEach((course) => {
+            if (course.value !== '') {
+                courseValues.push(course.value);
+            }
+        });
+        return courseValues;
+    }
+
+    // Function to generate the list of courses
+    function generateCourseList() {
+        const courses = getCourseValues();
+        return courses.map((course) => `<li>${course}</li>`).join('');
+    }
 
     // Add new course text boxes
-addCourseButton.addEventListener('click', function () {
-    const coursesDiv = document.getElementById('courses');
-    const newCourseInput = document.createElement('input');
-    newCourseInput.type = 'text';
-    newCourseInput.name = 'course';
-    coursesDiv.appendChild(newCourseInput);
+    addCourseButton.addEventListener('click', function () {
+        const coursesDiv = document.getElementById('courses');
+        const newCourseInput = document.createElement('input');
+        newCourseInput.type = 'text';
+        newCourseInput.name = 'course';
+        coursesDiv.appendChild(newCourseInput);
 
-    // Add a delete button
-    const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
-    deleteButton.addEventListener('click', function () {
-        coursesDiv.removeChild(newCourseInput);
-        coursesDiv.removeChild(deleteButton);
+        // Add a delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', function () {
+            coursesDiv.removeChild(newCourseInput);
+            coursesDiv.removeChild(deleteButton);
+        });
+        coursesDiv.appendChild(deleteButton);
     });
-    coursesDiv.appendChild(deleteButton);
-});
-
 });

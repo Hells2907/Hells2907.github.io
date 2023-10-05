@@ -5,6 +5,7 @@
         <meta name = "viewport" content = "width=device-width, initial scale=1.0">
         <title>Helly Acharya's Homey Alligator || ITIS 3135 BYO-Introduction Page</title>
         <link rel="stylesheet" type="text/css" href="styles/default.css">
+        <script src="scripts/defaultscripts.js"></script>
         <style>
             body {
                 background-image: url('images/backgroundimg.jpeg');
@@ -25,67 +26,78 @@
     <script src="scripts/HTMLInclude.min.js"></script>
     <main>
         
-        <h2>BYO Introduction Page</h2>
-        <h3>Time to BYO Intro page, please fill out the form below so we 
-            can create your own page.
-        </h3>
-       
+        <h2>BYO Intro</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
         <form id="introForm">
+            <!-- Name -->
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
+            <!-- Mascot -->
             <label for="mascot">Mascot:</label>
             <input type="text" id="mascot" name="mascot" required>
 
-            <label for="image">Image (PNG or JPG):</label>
+            <!-- Image Upload -->
+            <label for="image">Image:</label>
             <input type="file" id="image" name="image" accept=".png, .jpg" required>
-
+            
+            <!-- Image Caption -->
             <label for="imageCaption">Image Caption:</label>
             <input type="text" id="imageCaption" name="imageCaption" required>
 
+            <!-- Personal Background -->
             <label for="personalBackground">Personal Background:</label>
-            <input type="text" id="personalBackground" name="personalBackground" required>
-                
+            <textarea id="personalBackground" name="personalBackground" required></textarea>
+
+            <!-- Professional Background -->
             <label for="professionalBackground">Professional Background:</label>
-            <input type="text" id="professionalBackground" name="professionalBackground" required>
+            <textarea id="professionalBackground" name="professionalBackground" required></textarea>
 
+            <!-- Academic Background -->
             <label for="academicBackground">Academic Background:</label>
-            <input type="text" id="academicBackground" name="academicBackground" required>
+            <textarea id="academicBackground" name="academicBackground" required></textarea>
 
-            <label for="backgroundinWebDevelopment">Background in Web Development:</label>
-            <input type="text" id="backgroundinWebDevelopment" name="backgroundinWebDevelopment" required>
+            <!-- Background in Web Development -->
+            <label for="webDevelopmentBackground">Background in Web Development:</label>
+            <textarea id="webDevelopmentBackground" name="webDevelopmentBackground" required></textarea>
 
-            <label for="primaryComputerPlatform">Primary Computer Platform:</label>
-            <input type="text" id="primaryComputerPlatform" name="primaryComputerPlatform" required>
+            <!-- Primary Computer Platform -->
+            <label for="computerPlatform">Primary Computer Platform:</label>
+            <input type="text" id="computerPlatform" name="computerPlatform" required>
 
-
-            <label>Courses currently taking:</label>
-            <div id="courses">
-    <input type="text" name="course" required>
+            <!-- Courses Currently Taking -->
+            <label for="coursesTaking">Courses Currently Taking:</label>
+            <div id="coursesContainer">
+                <input type="text" class="courseInput" name="coursesTaking[]" required>
+                <button type="button" class="deleteCourse">Delete</button>
             </div>
-            <button type="button" id="addCourse">Add Course</button>  
+            <button type="button" id="addCourse">Add Course</button>
 
-                <label for="funnyThing">Funny Thing?</label>
-                <textarea id="funnyThing" name="funnyThing"></textarea>
-                
-                
-                <label for="anythingElse">Anything else?</label>
-                <textarea id="anythingElse" name="anythingElse"></textarea>
-                
-                
-                <label>
-                    <input type="checkbox" id="agreement" required>
-                    I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
-                </label>
-                
-                
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-      
+            <!-- Funny Thing -->
+            <label for="funnyThing">Funny Thing?</label>
+            <textarea id="funnyThing" name="funnyThing"></textarea>
 
-                
+            <!-- Anything Else -->
+            <label for="anythingElse">Anything Else?</label>
+            <textarea id="anythingElse" name="anythingElse"></textarea>
+
+            <!-- Agreement Checkbox -->
+            <label for="agreement">
+                <input type="checkbox" id="agreement" name="agreement" required>
+                I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+            </label>
+
+            <!-- Control Buttons -->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
         </form>
+
+        <!-- Display Area for Results -->
+        <div id="results" style="display: none;">
+            <!-- JavaScript will populate this section -->
+        </div>
     </main>
+    <script src="scripts/defaultscripts.js"></script>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
  

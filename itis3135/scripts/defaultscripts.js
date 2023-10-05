@@ -70,110 +70,94 @@ function alligatorSwim() {
     alert("🏊‍♂️🐊 Alligator is taking a dip in the swamp! 🏊‍♂️🐊");
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('introForm');
-    const addCourseButton = document.getElementById('addCourse');
-    const introPageContainer = document.getElementById('introPageContainer');
 
-    // Prevent form submission without necessary information
-    form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the form from submitting by default
-
-        // Implement form validation logic here
-        const name = document.getElementById('name').value;
-        const mascot = document.getElementById('mascot').value;
-        const image = document.getElementById('image').value;
-        const imageCaption = document.getElementById('imageCaption').value;
-        const personalBackground = document.getElementById('personalBackground').value;
-        const professionalBackground = document.getElementById('professionalBackground').value;
-        const academicBackground = document.getElementById('academicBackground').value;
-        const backgroundinWebDevelopment = document.getElementById('backgroundinWebDevelopment').value;
-        const primaryComputerPlatform = document.getElementById('primaryComputerPlatform').value;
-        const courses = getCourseValues();
-        const funnyThing = document.getElementById('funnyThing').value;
-        const anythingElse = document.getElementById('anythingElse').value;
-        const agreement = document.getElementById('agreement').checked;
-
-        // Check if all required fields are filled
-        const allFieldsAreFilled = !(
-            name === '' ||
-            mascot === '' ||
-            image === '' ||
-            imageCaption === '' ||
-            personalBackground === '' ||
-            professionalBackground === '' ||
-            academicBackground === '' ||
-            backgroundinWebDevelopment === '' ||
-            primaryComputerPlatform === '' ||
-            courses.length === 0
-        );
-
-        // If all required fields are filled
-        if (allFieldsAreFilled) {
-            // Create the introduction page HTML
-            const introPageHTML = `
-                <h2>Welcome to My Introduction Page</h2>
-                <p>Name: ${name}</p>
-                <p>Mascot: ${mascot}</p>
-                <img src="${image}" alt="User Image">
-                <p>Image Caption: ${imageCaption}</p>
-                <p>Personal Background: ${personalBackground}</p>
-                <p>Professional Background: ${professionalBackground}</p>
-                <p>Academic Background: ${academicBackground}</p>
-                <p>Background in Web Development: ${backgroundinWebDevelopment}</p>
-                <p>Primary Computer Platform: ${primaryComputerPlatform}</p>
-                <h3>Courses Currently Taking:</h3>
-                <ul>${generateCourseList()}</ul>
-                <p>Funny Thing: ${funnyThing}</p>
-                <p>Anything else? ${anythingElse}</p>
-                <p>Agreed to terms: ${agreement ? 'Yes' : 'No'}</p>
-            `;
-
-            // Display the introduction page
-            introPageContainer.innerHTML = introPageHTML;
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to prevent form submission without necessary information
+    document.getElementById("introForm").addEventListener("submit", function(event) {
+        if (!validateForm()) {
+            event.preventDefault();
         }
     });
 
-    // Reset the form when the Reset button is clicked
-    const resetButton = document.querySelector('input[type="reset"]');
-    resetButton.addEventListener('click', function () {
-        form.reset();
-        introPageContainer.innerHTML = ''; // Clear the introduction page container
+    // Function to reset the form
+    document.querySelector("input[type='reset']").addEventListener("click", function() {
+        document.getElementById("results").style.display = "none";
     });
 
-    // Function to get values of course input fields
-    function getCourseValues() {
-        const courses = document.querySelectorAll('input[name="course"]');
-        const courseValues = [];
-        courses.forEach((course) => {
-            if (course.value !== '') {
-                courseValues.push(course.value);
-            }
+    // Function to add new course text boxes
+    document.getElementById("addCourse").addEventListener("click", function() {
+        const coursesContainer = document.getElementById("coursesContainer");
+        const courseInput = document.createElement("input");
+        courseInput.type = "text";
+        courseInput.classList.add("courseInput");
+        courseInput.name = "coursesTaking[]";
+        courseInput.required = true;
+        
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.classList.add("deleteCourse");
+        deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click", function() {
+            coursesContainer.removeChild(courseInput);
+            coursesContainer.removeChild(deleteButton);
         });
-        return courseValues;
-    }
 
-    // Function to generate the list of courses
-    function generateCourseList() {
-        const courses = getCourseValues();
-        return courses.map((course) => `<li>${course}</li>`).join('');
-    }
+        coursesContainer.appendChild(courseInput);
+        coursesContainer.appendChild(deleteButton);
+    });
 
-    // Add new course text boxes
-    addCourseButton.addEventListener('click', function () {
-        const coursesDiv = document.getElementById('courses');
-        const newCourseInput = document.createElement('input');
-        newCourseInput.type = 'text';
-        newCourseInput.name = 'course';
-        coursesDiv.appendChild(newCourseInput);
+    // Function to gather data and display results
+    document.getElementById("introForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        const results = document.getElementById("results");
 
-        // Add a delete button
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Delete';
-        deleteButton.addEventListener('click', function () {
-            coursesDiv.removeChild(newCourseInput);
-            coursesDiv.removeChild(deleteButton);
-        });
-        coursesDiv.appendChild(deleteButton);
+        // Create HTML content for the results
+        let html = "<h3>Your Introduction Page:</h3>";
+        html += "<ul>";
+        for (const [key, value] of formData.entries()) {
+            html += `<li><strong>${key}:</strong> ${value}</li>`;
+        }
+        html += "</ul>";
+
+        results.innerHTML = html;
+        results.style.display = "block";
     });
 });
+
+// Function to validate the form
+function validateForm() {
+    const name = document.getElementById("name").value;
+    const mascot = document.getElementById("mascot").value;
+    const image = document.getElementById("image").value;
+    const imageCaption = document.getElementById("imageCaption").value;
+    const personalBackground = document.getElementById("personalBackground").value;
+    const professionalBackground = document.getElementById("professionalBackground").value;
+    const academicBackground = document.getElementById("academicBackground").value;
+    const webDevelopmentBackground = document.getElementById("webDevelopmentBackground").value;
+    const computerPlatform = document.getElementById("computerPlatform").value;
+    const agreement = document.getElementById("agreement").checked;
+    
+    // Check if any of the required fields are empty
+    if (
+        name.trim() === "" ||
+        mascot.trim() === "" ||
+        image.trim() === "" ||
+        imageCaption.trim() === "" ||
+        personalBackground.trim() === "" ||
+        professionalBackground.trim() === "" ||
+        academicBackground.trim() === "" ||
+        webDevelopmentBackground.trim() === "" ||
+        computerPlatform.trim() === "" ||
+        !agreement
+    ) {
+        alert("Please fill out all required fields and agree to the terms.");
+        return false;
+    }
+
+    // You can add additional custom validation rules here if needed.
+
+    return true;
+}
+
+

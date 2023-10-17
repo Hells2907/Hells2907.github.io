@@ -32,6 +32,7 @@ header nav a:hover {
 }
 
 
+
 main {
   text-align: center;
   padding: 20px;
@@ -197,6 +198,20 @@ input[type="email"],
 input[type="tel"] {
   width: 100%; 
 }
+@media ( min-width: 576px){
+  body{
+  margin: 20px;
+  min-width: 100px;
+  }
+
+  .consents{
+      min-width: 50px;
+  }
+
+  footer, header{
+      margin: 10px;
+  }
+}
 
 .alligator-functions-box {
   background-color: #DEDBD2;
@@ -206,6 +221,7 @@ input[type="tel"] {
   margin-top: 20px;
   text-align: center;
 }
+
 
 .alligator-functions-box button {
   margin: 10px;
@@ -221,5 +237,6 @@ input[type="tel"] {
 .alligator-functions-box button:hover {
   background-color: #333;
 }
+
 
 

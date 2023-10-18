@@ -8,8 +8,8 @@ header {
   color: #333333; 
   text-align: center;
   padding: 20px;
-  margin: 0;
-  font-size: 24px;
+  margin: 10px 0;
+  font-size: 20px;
   width: 100%; 
 }
 
@@ -136,7 +136,7 @@ footer {
   text-align: center;
   padding: 20px;
   margin: 0;
-  font-size: 24px; 
+  font-size: 20px; 
   width: 100%; 
   margin-top: 60px; 
 }
@@ -238,5 +238,31 @@ input[type="tel"] {
   background-color: #333;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-groups li,
+.content-overview li {
+  width: calc(50% - 20px); /* 50% width with a 10px margin on each side */
+  border: 1px solid #e0d7b5;
+  background-color: #fff5e1;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: darkolivegreen;
+}
+
+
+
+.site-map {
+    text-align: center; /* Center-align the content within the section */
+}
 
 

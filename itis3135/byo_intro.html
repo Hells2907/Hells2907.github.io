@@ -9,7 +9,7 @@
         
         <style>
             body {
-                background-image: url('images/backgroundimg.jpeg');
+                background-image: url('images/backgroundimage.JPG');
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -22,7 +22,6 @@
     </head>
 
 <body>
-    <div class="container"> 
     <div data-include="components/header.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
     <main>
@@ -70,9 +69,10 @@
             <label for="coursesTaking">Courses Currently Taking:</label>
             <div id="coursesContainer">
                 <input type="text" class="courseInput" name="coursesTaking[]" required>
-                <button type="button" class="deleteCourse">Delete</button>
+                <button type="button" class="reset">Delete</button>
+                <button type="button" class="submit">Add Course</button>  
             </div>
-            <button type="button" id="addCourse">Add Course</button>
+            
 
             <!-- Funny Thing -->
             <label for="funnyThing">Funny Thing?</label>
@@ -89,8 +89,8 @@
             </label>
 
             <!-- Control Buttons -->
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
         </form>
 
         <!-- Display Area for Results -->
@@ -102,7 +102,7 @@
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
  
-    </div>
+    
     <script src="scripts/survey.js"></script>
     
 </body>

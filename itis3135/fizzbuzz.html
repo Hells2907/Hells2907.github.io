@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial scale=1.0">
+        <title>Helly Acharya's Homey Alligator || ITIS 3135 Homepage</title>
+        <link rel="stylesheet" type="text/css" href="styles/default.css">
+        <style>
+            body {
+                background-image: url('images/backgroundimage.JPG');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            
+            }
+            #output {
+                font-size: 18px;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            th, td {
+                padding: 10px;
+               text-align: center;
+            }
+        </style>   
+    </head>
+    
+    <body>
+    <main>
+        <div class="container"> 
+            <div data-include="components/header.html"></div>
+            <script src="scripts/HTMLInclude.min.js"></script>
+            <p>Fizz Buzz BANG results will go here:</p>
+        <table id="output"></table>
+        
+      
+        <script>
+            
+            function fizzBuzzBANG() {
+              var output = document.getElementById("output");
+              var row, cell;
+              var count = 0;
+        
+              for (var i = 1; i <= 110; i++) {
+                if (count % 5 === 0) {
+                  row = output.insertRow();
+                  count = 0;
+                }
+        
+                var result = "";
+                if (i % 3 === 0) {
+                  result += "Fizz ";
+                }
+                if (i % 5 === 0) {
+                  result += "Buzz ";
+                }
+                if (i % 7 === 0) {
+                  result += "BANG";
+                }
+                if (result === "") {
+                  result = i;
+                }
+        
+                cell = row.insertCell();
+                cell.textContent = result;
+                count++;
+              }
+            }
+        
+            
+            fizzBuzzBANG();
+          </script>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.min.js"></script>
+    </div>
+    </main>
+</body>
+
+</html>

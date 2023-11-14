@@ -1,0 +1,127 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#who h2,
+#what h2,
+#when h2,
+#where h2,
+#how h2,
+#why h2,
+#my-dishes h2 {
+    font-size: 24px;
+    color: #ff5733; /* Change this to your desired color */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    color: orange;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.image-column {
+    float: left;
+    width: 250px; 
+    padding: 20px;
+}
+
+.image-column img {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    padding: 20px;
+    margin-left: 0; 
+    color: powderblue;
+    text-align: center;
+    margin-right: 250px;
+}
+
+section:first-child {
+    display: block; 
+}
+
+h2 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: 18px;
+    color: rgba(0, 255, 208, 0.587);
+}
+
+
+#my-dishes {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+#my-dishes h2 {
+    font-size: 24px;
+}
+
+.dish-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.dish-collage figure {
+    text-align: center;
+}
+
+.dish-collage img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dish-collage figcaption {
+    font-style: italic;
+    color: olive;
+}
+
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+

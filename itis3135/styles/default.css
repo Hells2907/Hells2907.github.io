@@ -6,13 +6,20 @@ header {
 header nav a {
   color: #28231C;
   padding: 10px;
-  margin: 0;
+  margin: 10px 0;
   text-decoration: none;
 }
 
 header nav a:hover {
   color: #2D4739;
 }
+
+.separator {
+  border: none;
+  border-top: 2px solid darkgreen;
+  margin: 15px 0;
+}
+
 
 main {
   text-align: center;

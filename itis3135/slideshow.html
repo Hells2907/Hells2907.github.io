@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial scale=1.0">
+        <title>Helly Acharya's Homey Alligator || ITIS 3135 Slideshow</title>
+        <link rel="stylesheet" type="text/css" href="styles/default.css">
+        <style>
+            body {
+                background-image: url('images/backgroundimage.JPG');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                margin: 0;
+                padding: 0;
+            }
+    
+           
+        </style>   
+    </head>
+
+<body>
+    <div class="container"> 
+    <div data-include="components/header.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <main>
+        
+        <div class="slideshow-container">
+            <div class="slideshow-images">
+              <!-- Images will be displayed here -->
+              <img class="slide" src="path/to/default-image.jpg" alt="Slideshow Image">
+              <div class="caption">Caption Text</div>
+            </div>
+            
+            <!-- Thumbnails for image selection -->
+            <div class="thumbnail-container">
+              <img class="thumbnail" src="path/to/image1.jpg" onclick="currentSlide(1)" alt="Thumbnail 1">
+              <img class="thumbnail" src="path/to/image2.jpg" onclick="currentSlide(2)" alt="Thumbnail 2">
+              <!-- Add more thumbnails for each image -->
+            </div>
+          </div>
+       
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+ 
+    </div>
+
+    <script>
+        // JavaScript for slideshow functionality
+        var slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("slide");
+          var captions = document.getElementsByClassName("caption");
+          var thumbnails = document.getElementsByClassName("thumbnail");
+    
+          // Hide all slides and reset thumbnail styles
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            thumbnails[i].style.opacity = "0.5"; // Adjust opacity for unselected thumbnails
+          }
+    
+          // Show the selected slide and highlight the respective thumbnail
+          slides[slideIndex - 1].style.display = "block";
+          thumbnails[slideIndex - 1].style.opacity = "1"; // Adjust opacity for selected thumbnail
+    
+          // Set caption for the current image (update this based on your naming logic)
+          var captionText = "Caption for the current image";
+          captions[slideIndex - 1].innerHTML = captionText;
+        }
+      </script>
+    
+</body>
+</html>

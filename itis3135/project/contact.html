@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continental Inn - Contact Us</title>
+  <link rel="stylesheet" href="styles/project.css">
+</head>
+<style>
+    #background-image {
+  background-image: url('images/bgimg2.JPG'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: lightblue;
+
+}
+
+.contact-form label[for="message"] {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+
+.contact-form textarea {
+      width: 100%;
+      height: 100px; 
+      resize: vertical;
+      padding: 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .contact-form input[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+
+</style>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo-png.png" alt="Continental Inn Logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div id="background-image">
+        <section class="about-section">
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p><strong>Address:</strong> 123 Hotel Street, Charlotte, North Carolina</p>
+        <p><strong>Phone:</strong> 123-456-7890</p>
+        <p><strong>Email:</strong> info@continentalinn.com</p>
+      </div>
+      <div class="contact-form">
+        <h3>Send us a message:</h3>
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label><br> 
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <input type="submit" value="Submit">
+</form>
+          </div>
+      </div>
+    </section>
+    </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="left-section">
+      <p>Continental Inn</p>
+      <p>123 Hotel Street, Charlotte, North Carolina</p>
+      <p>Phone: 123-456-7890</p>
+    </div>
+    <div class="right-section">
+        <p>Page Built by <a href="acharyainsights.com/index.html"> Acharya Insights </a>&copy; 2023 </p>
+        <p>Certified: <a href="https://www.freecodecamp.org/certification/Hells_2907/responsive-web-design">Web Design</a> and
+        <a href="https://www.freecodecamp.org/certification/Hells_2907/javascript-algorithms-and-data-structures">JavaScript</a> </p>
+        <a href="https://validator.w3.org/check?uri=referer">
+         
+            <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
+           </a>
+           <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+             </a>
+    </div>
+  </footer>
+</body>
+</html>

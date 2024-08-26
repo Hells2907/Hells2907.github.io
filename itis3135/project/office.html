@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Continental Inn - About Us</title>
+  <title>Continental Inn - Gallery - Rooms</title>
   <link rel="stylesheet" href="styles/project.css">
 </head>
 <style>
-    #background-image {
-  background-image: url('images/bgimg2.JPG'); 
-  background-size: cover;
-  background-position: center;
-  height: 100vh; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  color: lightblue;
+    .hero-image {
+      background-size: cover;
+      height: 100vh; 
+    
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: center;
+    }
 
-}
+    
+    .gallery img {
+      max-width: 100%; 
+      height: 700px; 
+      object-fit: cover; 
+      margin: 5px; 
+    }
+
+
+    .gallery img:first-child {
+      display: block;
+    }
+    main{
+        color: rgba(0, 0, 96, 0.815);
+    }
 
 </style>
+
 <body>
   <header>
     <a href="index.html" class="logo">
-      <img src="images/logo-png.png" alt="Continental Inn Logo">
-    </a>
+        <img src="images/logo-png.png" alt="Continental Inn Logo">
+      </div>
+    
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -36,20 +53,41 @@
       </ul>
     </nav>
   </header>
-  
+
   <main>
-    <div id="background-image">
-    <section class="about-section">
-        <div class="about-content">
-      <h2>About Us</h2>
-      <p>Welcome to Continental Inn!</p>
-      <p>We are a luxurious hotel located in the heart of Charlotte, North Carolina. Our mission is to provide exceptional hospitality and a comfortable stay for all our guests.</p>
-      <p>At Continental Inn, we offer elegantly designed rooms, excellent amenities, and personalized services to ensure a memorable experience for our guests.</p>
-      <p>Our dedicated staff is committed to making your stay enjoyable and relaxing. Whether you're here for business or leisure, we strive to exceed your expectations.</p>
-      <p>Experience comfort, convenience, and impeccable service at Continental Inn. We look forward to hosting you!</p>
-    </section>
-</div>
+    <section class="gallery-section">
+        <h2>Office</h2>
+       
+        <div class="gallery">
+          <img src="images/office1.jpeg" alt="Office Image 1">
+          <img src="images/office2.jpeg" alt="Office Image 2">
+          <img src="images/office3.jpeg" alt="Office Image 3">
+          
+        </div>
+      </section>
+
   </main>
+
+  <script>
+    
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.gallery img');
+    
+    
+    function showSlide() {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = 'block';
+      setTimeout(showSlide, 2000); 
+    }
+
+    showSlide(); 
+  </script>
 
   <footer>
     <div class="left-section">
@@ -68,5 +106,9 @@
       </a>
     </div>
   </footer>
+
 </body>
+
 </html>
+
+

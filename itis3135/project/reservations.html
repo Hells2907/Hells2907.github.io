@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continental Inn - Reservations</title>
+  <link rel="stylesheet" href="styles/project.css">
+</head>
+<style>
+    #background-image {
+  background-image: url('images/bgimg2.JPG'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: lightblue;
+}
+
+</style>
+
+
+<body>
+  <header>
+    <a href="index.html" class="logo">
+        <img src="images/logo-png.png" alt="Continental Inn Logo">
+      </div>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="reservations.html">Reservations</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div id="background-image">
+      <div class="content">
+        <form id="reservation-form">
+          <h2>Make a Reservation</h2>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="check-in-date">Check-in Date:</label>
+          <input type="date" id="check-in-date" name="check-in-date" required><br><br>
+
+          <label for="check-out-date">Check-out Date:</label>
+          <input type="date" id="check-out-date" name="check-out-date" required><br><br>
+
+          <label for="room-type">Room Type:</label>
+          <select id="room-type" name="room-type">
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+            <option value="suite">Suite</option>
+          </select><br><br>
+
+          <label for="guests">Number of Guests:</label>
+          <input type="number" id="guests" name="guests" min="1" max="10" required><br><br>
+
+          <label for="special-requests">Special Requests:</label><br>
+          <textarea id="special-requests" name="special-requests" rows="4" cols="50"></textarea><br><br>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="left-section">
+      <p>Continental Inn</p>
+      <p>123 Hotel Street, Charlotte, North Carolina</p>
+      <p>Phone: 123-456-7890</p>
+    </div>
+
+    <div class="right-section">
+      <p>Page Built by <a href="acharyainsights.com/index.html"> Acharya Insights </a>&copy; 2023 </p>
+    <p>Certified: <a href="https://www.freecodecamp.org/certification/Hells_2907/responsive-web-design">Web Design</a> and
+    <a href="https://www.freecodecamp.org/certification/Hells_2907/javascript-algorithms-and-data-structures">JavaScript</a> </p>
+    <a href="https://validator.w3.org/check?uri=referer">
+     
+        <img style="border:0;width:88px;height:31px" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/W3C_HTML5_certified.png" alt="Valid HTML!">
+       </a>
+       <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+         </a>
+    </div>
+  </footer>
+  <script src="scripts/reservations.js"></script>
+
+  <script>
+    
+    $(document).ready(function() {
+      $('#reservation-form').formValidationPlugin({
+        
+      });
+    });
+  </script>
+</body>
+</html>

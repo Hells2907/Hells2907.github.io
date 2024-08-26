@@ -231,6 +231,17 @@ button {
   grid-row: 2 / span 4;
 }
 
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
 footer {
   position: relative;
   color: #513B3C;

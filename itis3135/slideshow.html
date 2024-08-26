@@ -24,58 +24,139 @@
     <div data-include="components/header.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
     <main>
-        
-        <div class="slideshow-container">
-            <div class="slideshow-images">
-              <!-- Images will be displayed here -->
-              <img class="slide" src="path/to/default-image.jpg" alt="Slideshow Image">
-              <div class="caption">Caption Text</div>
-            </div>
-            
-            <!-- Thumbnails for image selection -->
-            <div class="thumbnail-container">
-              <img class="thumbnail" src="path/to/image1.jpg" onclick="currentSlide(1)" alt="Thumbnail 1">
-              <img class="thumbnail" src="path/to/image2.jpg" onclick="currentSlide(2)" alt="Thumbnail 2">
-              <!-- Add more thumbnails for each image -->
-            </div>
+      <h2> Name Slideshow</h2>
+      
+      <div class="slideshow-container">
+          <div class="mySlides">
+              <div class="number-text">1 / 12</div>
+              <img src="images/hoodiepic.JPG"> 
           </div>
-       
-    </main>
+
+          <div class="mySlides">
+              <div class="number-text">2 / 12</div>
+              <img src="images/eggpic.jpeg">
+          </div>
+
+          <div class="mySlides">
+              <div class="number-text">3 / 12</div>
+              <img src="images/librarypic.JPG">
+          </div>
+
+          <div class="mySlides">
+              <div class="number-text">4 / 12</div>
+              <img src="images/lipbalmpic.jpeg">
+          </div>
+
+          <div class="mySlides">
+              <div class="number-text">5 / 12</div>
+              <img src="images/yellowpepperpic.jpeg">
+          </div>
+
+          <div class="mySlides">
+              <div class="number-text">6 / 12</div>
+              <img src="images/airplanepic.JPG">
+          </div>
+
+          <div class="mySlides">
+              <div class="number-text">7 / 12</div>
+              <img src="images/catpic.JPG">
+          </div>
+
+          <div class="mySlides">
+              <div class="number-text">8 / 12</div>
+              <img src="images/honeypic.jpeg">
+          </div>
+
+          <div class="mySlides">
+              <div class="number-text">9 / 12</div>
+              <img src="images/apronpic.JPG">
+          </div>
+
+          <div class="mySlides">
+              <div class="number-text">10 / 12</div>
+              <img src="images/riceplatepic.jpeg">
+          </div>
+
+          <div class="mySlides">
+              <div class="number-text">11 / 12</div>
+              <img src="images/yogurtpic.jpeg">
+          </div>
+
+          <div class="mySlides">
+              <div class="number-text">12 / 12</div>
+              <img src="images/almondspic.jpeg">
+          </div>
+
+          
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <div class="caption-container">
+              <p id="caption"></p>
+          </div>
+
+          <div class="row">
+              <div class="column">
+                  <img class="demo cursor" src="images/hoodiepic.JPG" onclick="currentSlide(1)" alt="H - Hoodie">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/eggpic.jpeg" onclick="currentSlide(2)" alt="E - Eggs">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/librarypic.JPG" onclick="currentSlide(3)" alt="L - Library">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/lipbalmpic.jpeg" onclick="currentSlide(4)" alt="L - Lip Balm">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/yellowpepperpic.jpeg" onclick="currentSlide(5)" alt="Y - Yellow Pepper">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/airplanepic.JPG" onclick="currentSlide(6)" alt="A - Airplane">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/catpic.JPG" onclick="currentSlide(7)" alt="C - Cat">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/honeypic.jpeg" onclick="currentSlide(8)" alt="H - Honey">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/apronpic.JPG" onclick="currentSlide(9)" alt="A - Apron">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/riceplatepic.jpeg" onclick="currentSlide(10)" alt="R - Rice">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/yogurtpic.jpeg" onclick="currentSlide(11)" alt="Y - Yogurt">
+              </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/almondspic.jpeg" onclick="currentSlide(12)" alt="A - Almonds">
+              </div>
+
+              
+          </div>
+      </div>
+
+      <script src="scripts/slideshow.js"></script>
+  </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
  
     </div>
 
-    <script>
-        // JavaScript for slideshow functionality
-        var slideIndex = 1;
-        showSlides(slideIndex);
     
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-    
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("slide");
-          var captions = document.getElementsByClassName("caption");
-          var thumbnails = document.getElementsByClassName("thumbnail");
-    
-          // Hide all slides and reset thumbnail styles
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-            thumbnails[i].style.opacity = "0.5"; // Adjust opacity for unselected thumbnails
-          }
-    
-          // Show the selected slide and highlight the respective thumbnail
-          slides[slideIndex - 1].style.display = "block";
-          thumbnails[slideIndex - 1].style.opacity = "1"; // Adjust opacity for selected thumbnail
-    
-          // Set caption for the current image (update this based on your naming logic)
-          var captionText = "Caption for the current image";
-          captions[slideIndex - 1].innerHTML = captionText;
-        }
-      </script>
     
 </body>
 </html>
